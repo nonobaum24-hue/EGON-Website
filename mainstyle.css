@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background-image: radial-gradient(circle at center, #313131 0%, #111111 65%, #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,7 +27,27 @@ body {
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
     padding-right: 1vw;
+}
 
+#merch {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2vh 2vw;
+    padding: 2vh;
+}
+
+.merchcard {
+    background-color: hsla(70 0% 19.9% / 0.39);
+    border-radius: 30px;
+    padding: 20px;
+    width: 40vh;
+    height: auto;
     
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    
 }
