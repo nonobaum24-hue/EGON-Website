@@ -42,7 +42,7 @@ body {
     padding: 20px;
     width: 40vh;
     height: auto;
-    
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -50,4 +50,7 @@ body {
     align-items: center;
     align-content: space-around;
     
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
 }
