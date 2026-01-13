@@ -1,6 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
+
     background-image: radial-gradient(circle at center, #313131 0%, #111111 65%, #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -53,7 +56,10 @@ body {
     border-color: white;
     border-width: 2px;
     border-style: solid;
+}
 
+a {
     text-decoration: none;
+    color: white;
 }
 
