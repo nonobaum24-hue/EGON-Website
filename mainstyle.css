@@ -5,8 +5,27 @@ body {
 }
 
 #topbar {
-    background-color: #222222;
+    background-color: hsla(70 0% 19.9% / 0.39);
+    height: 20vh;
 
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+
+}
+
+#logo {
+    display: inline-block;
+    height: 19vh;
+    width: auto;
+    margin-left: 1vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    padding-right: 1vw;
+
+    
 
 }
