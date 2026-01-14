@@ -1,0 +1,33 @@
+#merch {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2vh 2vw;
+    padding: 2vh;
+    margin-top: 1vh;
+}
+
+.merchcard {
+    background-color: hsla(70 0% 19.9% / 0.39);
+    border-radius: 30px;
+    padding: 20px;
+    width: 40vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+}
+
+.merchcard:hover {
+    box-shadow: 1px 1px 20px 10px rgb(0, 0, 0);
+    transition: box-shadow, scale 0.2s ease-in;
+    scale: 1.02;
+}
