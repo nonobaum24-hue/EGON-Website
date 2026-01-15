@@ -4,13 +4,15 @@
     gap: 2vh 2vw;
     padding: 2vh;
     margin-top: 1vh;
+
+    justify-content: center;
 }
 
 .merchcard {
     background-color: hsla(70 0% 19.9% / 0.39);
     border-radius: 30px;
     padding: 20px;
-    width: 40vh;
+    width: 30vw;
     height: auto;
 
     display: flex;
@@ -31,3 +33,14 @@
     transition: box-shadow, scale 0.2s ease-in;
     scale: 1.02;
 }
+
+.merchcard img {
+    width: 28vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.merchcard h1, h2{
+    margin-bottom: -5px;
+}
+
