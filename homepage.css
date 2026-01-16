@@ -41,6 +41,35 @@
 }
 
 .merchcard h1, h2{
-    margin-bottom: -5px;
+    margin-top: 5px;
+    margin-bottom: 3px;
 }
 
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.color {
+    border-radius: 100px;
+    height: 25px;
+    width: 25px;
+    border: rgb(94, 94, 94) solid 2px;
+    cursor: pointer;
+}
+
+#b {
+    background-color: rgb(57, 71, 255);
+}
+
+#lb {
+    background-color: hsl(184, 62%, 62%);
+}
+
+#r {
+    background-color: hsl(0, 100%, 67%);
+}

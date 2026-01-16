@@ -15,7 +15,22 @@
    </div>
    <div id = "merch">
         <a class = "merchcard" href="">
-            <img src = "img/products/Hood/HoodBP b.png" alt = "Merch Hoodie"/>
+            <img src = "img/products/Hood/HoodBP b.png" id="hoodiebp" alt = "Merch Hoodie"/>
+
+            <div class="button-container">
+                <button id="b" class="color"
+                onclick='event.preventDefault(); document.getElementById("hoodiebp").src="img/products/Hood/HoodBP b.png"'>
+                </button>
+
+                <button id="lb" class="color"
+                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="img/products/Hood/HoodBP lb.png"'>
+                </button>
+                
+                <button id="r" class="color"
+                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="img/products/Hood/HoodBP r.png"'>
+                </button>
+            </div>
+            
             <h1>Hoodie</h1>
             <h2>Backprint</h2>
             <p>19,99€</p>
