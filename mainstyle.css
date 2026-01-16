@@ -13,6 +13,8 @@ body {
     background-color: hsla(70 0% 19.9% / 0.39);
     height: 20vh;
 
+    border-bottom: white 2px solid;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -32,7 +34,9 @@ body {
     padding-right: 1vw;
 }
 
-
+#logo img {
+    border-radius: 20px;
+}
 
 a {
     text-decoration: none;
