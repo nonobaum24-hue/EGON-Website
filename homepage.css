@@ -1,6 +1,7 @@
 #merch {
     display: grid;
     grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 40vw));
     gap: 2vh 2vw;
     padding: 2vh;
     margin-top: 1vh;
@@ -72,4 +73,8 @@
 
 #r {
     background-color: hsl(0, 100%, 67%);
+}
+
+#y {
+    background-color: hsl(48, 55%, 64%);
 }
