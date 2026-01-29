@@ -1,0 +1,33 @@
+#content {
+    width: 100vw;
+    height: calc(100vh - 20vh);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "picture content";
+    gap: 6px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    grid-area: picture;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article-image img {
+    border-radius: 30px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border
+}
+
+.article-text {
+    grid-area: content;
+    padding: 20px;
+}
