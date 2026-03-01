@@ -1,0 +1,52 @@
+#content {
+    width: 100vw;
+    height: calc(100vh - 20vh);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article-image img {
+    border-radius: 30px;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+.article-image .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.article-info {
+    color: white;
+    padding: 20px;
+}
+
+.article-info h1, .article-info h2 {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.article-info .button-container {
+    margin-bottom: 15px;
+}
+
+.article-info p {
+    font-size: 1.2rem;
+}
+
+.article-text {
+    margin-top: 20px;
+}

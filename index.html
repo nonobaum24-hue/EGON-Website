@@ -5,84 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>EGON SHOP</title>
     <link rel="stylesheet" href="mainstyle.css" />
-    <link rel="stylesheet" href="assets/css/topbar.css" />
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="phonestyle.css" />
 </head>
 <body>
-    <div id="top">
-        <logo>
-            <a href="index.html">
-            <img src="assets/img/logo.png" alt="Egon Logo" />
-            </a>
-        </logo>
-    </div>
+   <div id = "topbar">
+        <a id = "logo" href="index.html">
+            <img src="img/logo.png" alt="EGON Logo" height="100%" width="auto"/>
+        </a>
+   </div>
+   <div id = "merch">
 
-    <div class="merch">
+        <!-- Hoodie Backprint -->
+        <a class = "merchcard" href="Article.pages/hoodie.html">
+            <img src = "img/products/Hood/HoodBP b.png" id="hoodiebp" alt = "Merch Hoodie"/>
 
-        <a href="hoodie.html">
-        <div class="article-card" data-images="assets/img/products/Hood/HoodBP b.png,assets/img/products/Hood/HoodBP lb.png,assets/img/products/Hood/HoodBP r.png">
-            <img src="assets/img/products/Hood/HoodBP b.png" alt="Hoodie Image" />
+            <div class="button-container">
+                <button id="b" class="color"
+                onclick='event.preventDefault(); document.getElementById("hoodiebp").src="img/products/Hood/HoodBP b.png"'>
+                </button>
+
+                <button id="lb" class="color"
+                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="img/products/Hood/HoodBP lb.png"'>
+                </button>
+                
+                <button id="r" class="color"
+                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="img/products/Hood/HoodBP r.png"'>
+                </button>
+            </div>
+            
             <h1>Hoodie</h1>
-            <h2>Rückenprint</h2>
-            <p>Preis: 49.99€</p>
-        </div>
+            <h2>Backprint</h2>
+            <p>36€</p>
         </a>
 
-        <a href="hoodieC.html">
-            <div class="article-card" data-images="assets/img/products/HoodC/CHoodBP.png" data-colors="#1d4ed8">
-                <img src="assets/img/products/HoodC/CHoodBP.png" alt="kid-hoodie Image" />
-                <h1>Kinder Hoodie</h1>
-                <h2>Rückenprint</h2>
-                <p>Preis: 49.99€</p>
+        <!-- Hoodie Child -->
+        <a class="merchcard" href="Article.pages/hoodie-child.html">
+            <img src="img/products/HoodC/CHoodBP.png" id="hoodieC" alt="Merch Hoodie Child" />
+        
+            <div class="button-container">
+                <button id="b" class="color"
+                    onclick='event.preventDefault(); document.getElementById("hoodieC").src="img/products/HoodC/CHoodBP b.png"'>
+                </button>
             </div>
+        
+            <h1>Hoodie</h1>
+            <h2>Kindergrößen</h2>
+            <p>36€</p>
         </a>
 
-        <a href="shirtBP.html">
-        <div class="article-card" data-images="assets/img/products/ShirtBP/Shirt BP b.png,assets/img/products/ShirtBP/Shirt BP y.png">
-            <img src="assets/img/products/ShirtBP/Shirt BP b.png" alt="Shirt Image" />
+        <!-- Shirt Smallprint -->
+        <a class="merchcard" href="Article.pages/shirt-smallprint.html">
+            <img src="img/products/Shirt SP/ShirtSP b.png" id="ShirtSP" alt="Merch Shirt Smallprint" />
+
+            <div class="button-container">
+                <button id="b" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ShirtSP").src="img/products/Shirt SP/ShirtSP b.png"'>
+                </button>
+
+                <button id="y" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ShirtSP").src="img/products/Shirt SP/ShirtSP y.png"'>
+                </button>
+
+                <button id="r" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ShirtSP").src="img/products/Shirt SP/ShirtSP r.png"'>
+                </button>
+            </div>
+
             <h1>Shirt</h1>
-            <h2>Print groß</h2>
-            <p>Preis: 29.99€</p>
-        </div>
+            <h2>Smallprint</h2>
+            <p>19,99€</p>
         </a>
 
-        <a href="shirtSP.html">
-            <div class="article-card" data-images="assets/img/products/Shirt SP/ShirtSP b.png,assets/img/products/Shirt SP/ShirtSP r.png,assets/img/products/Shirt SP/ShirtSP y.png">
-                <img src="assets/img/products/Shirt SP/ShirtSP b.png" alt="ShirtSP Image" />
-                <h1>Shirt</h1>
-                <h2>Print klein</h2>
-                <p>Preis: 29.99€</p>
+        <!-- Shirt Bigprint -->
+        <a class="merchcard" href="Article.pages/shirt-bigprint.html">
+            <img src="img/products/Shirt BP/Shirt BP b.png" id="ShirtBP" alt="Merch Shirt Bigprint" />
+
+            <div class="button-container">
+                <button id="b" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ShirtBP").src="img/products/Shirt BP/Shirt BP b.png"'>
+                </button>
+
+                <button id="y" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ShirtBP").src="img/products/Shirt BP/Shirt BP y.png"'>
+                </button>
             </div>
+
+            <h1>Shirt</h1>
+            <h2>Bigprint</h2>
+            <p>19,99€</p>
         </a>
 
-        <a href="bottle.html">
-        <div class="article-card">
-            <img src="assets/img/products/Bott/" alt="Bottle image" />
-            <h1>Flasche</h1>
-            <h2>Metall</h2>
-            <p>Preis: 5.99€</p>
-        </div>
+        <!-- Zipper Bigprint -->
+        <a class="merchcard" href="Article.pages/zipper-bigprint.html">
+            <img src="img/products/ZHood BP/ZHood BP.png" id="ZipperBP" alt="Merch Zipper Bigprint" />
+
+            <div class="button-container">
+                <button id="b" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ZipperBP").src="img/products/ZHood BP/ZHood BP b.png"'>
+                </button>
+            </div>
+
+            <h1>Zipper</h1>
+            <h2>Bigprint</h2>
+            <p>19,99€</p>
         </a>
 
-        <a href="ZhoodieSP.html">
-        <div class="article-card" data-images="assets/img/products/ZHood SP/ZHood SP.png" data-colors="#1d4ed8">
-            <img src="assets/img/products/ZHood SP/ZHood SP.png" alt="Zip-Hoodie Image" />
-            <h1>Zip-Hoodie</h1>
-            <h2>Brustprint Klein</h2>
-            <p>Preis: 59.99€</p>
-        </div>
+        <!-- Zipper Smallprint -->
+        <a class="merchcard" href="Article.pages/zipper-smallprint.html">
+            <img src="img/products/ZHood SP/ZHood SP1.png" id="ZipperSP" alt="Merch Zipper Smallprint" />
+
+            <div class="button-container">
+                <button id="b" class="color"
+                    onclick='event.preventDefault(); document.getElementById("ZipperSP").src="img/products/ZHood SP/ZHood SP.png"'>
+                </button>
+            </div>
+
+            <h1>Zipper</h1>
+            <h2>Smallprint</h2>
+            <p>19,99€</p>
         </a>
 
-        <a href="ZhoodieBP.html">
-        <div class="article-card" data-images="assets/img/products/ZHood BP/ZHood BP.png" data-colors="#1d4ed8">
-            <img src="assets/img/products/ZHood BP/ZHood BP.png" alt="Zip-HoodieBP Image" />
-            <h1>Zip-Hoodie</h1>
-            <h2>Rückenprint</h2>
-            <p>Preis: 44.99€</p>
-        </div>
-        </a>
-
-    </div>
-
-    <script src="assets/js/cards.js"></script>
-
+   </div>
 </body>
