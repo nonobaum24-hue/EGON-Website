@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../mainstyle.css">
     <link rel="stylesheet" href="../homepage.css">
     <link rel="stylesheet" href="../article.page.css">
+
+    <!-- Paypal -->
+     <script 
+        src="https://www.paypal.com/sdk/js?client-id=BAAWwgVt1-spXpQwWFaVsKt71yb4c3bsWeDb7LdPY10UqCZh0aSnzz6f1XPjCG2iLo3U_KhdJDlGa5vjEk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+    </script>
 </head>
 <body>
     <div id="topbar">
@@ -32,15 +37,12 @@
                 </button>
             </div>
         </div>
-        <div class="article-info">
-            <h1>Hoodie</h1>
-            <h2>Backprint</h2>
-            <p>36€</p>
-
-            <div class="article-text">
-                <p>Unsere klassische Hoodie mit Rückendruck – bequem, warm und stilvoll. Perfekt für kühle Tage.</p>
-            </div>
-        </div>
+            <div id="paypal-container-97L9UQCJTAY9G" class="paypal"></div>
+            <script>
+                paypal.HostedButtons({
+                    hostedButtonId: "97L9UQCJTAY9G",
+                }).render("#paypal-container-97L9UQCJTAY9G")
+            </script>
     </div>
 </body>
 </html>

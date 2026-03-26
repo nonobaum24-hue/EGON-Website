@@ -29,24 +29,7 @@
     margin-top: 10px;
 }
 
-.article-info {
+.paypal {
     color: white;
-    padding: 20px;
-}
-
-.article-info h1, .article-info h2 {
-    margin-top: 5px;
-    margin-bottom: 3px;
-}
-
-.article-info .button-container {
-    margin-bottom: 15px;
-}
-
-.article-info p {
-    font-size: 1.2rem;
-}
-
-.article-text {
-    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
