@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../mainstyle.css">
     <link rel="stylesheet" href="../homepage.css">
     <link rel="stylesheet" href="../article.page.css">
+
+    <!-- Paypal -->
+     <script 
+        src="https://www.paypal.com/sdk/js?client-id=BAAWwgVt1-spXpQwWFaVsKt71yb4c3bsWeDb7LdPY10UqCZh0aSnzz6f1XPjCG2iLo3U_KhdJDlGa5vjEk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+    </script>
 </head>
 <body>
     <div id="topbar">
@@ -32,15 +37,12 @@
                 </button>
             </div>
         </div>
-        <div class="article-info">
-            <h1>Shirt</h1>
-            <h2>Smallprint</h2>
-            <p>19,99€</p>
-
-            <div class="article-text">
-                <p>Leichtes Shirt mit kleinem Aufdruck – perfekt für den Alltag.</p>
-            </div>
-        </div>
+        <div id="paypal-container-MEN8CT8ZRFMML" class="paypal"></div>
+        <script>
+            paypal.HostedButtons({
+                hostedButtonId: "MEN8CT8ZRFMML",
+            }).render("#paypal-container-MEN8CT8ZRFMML")
+        </script>
     </div>
 </body>
 </html>

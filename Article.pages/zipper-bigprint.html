@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../mainstyle.css">
     <link rel="stylesheet" href="../homepage.css">
     <link rel="stylesheet" href="../article.page.css">
+
+    <!-- Paypal -->
+     <script 
+        src="https://www.paypal.com/sdk/js?client-id=BAAWwgVt1-spXpQwWFaVsKt71yb4c3bsWeDb7LdPY10UqCZh0aSnzz6f1XPjCG2iLo3U_KhdJDlGa5vjEk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+    </script>
 </head>
 <body>
     <div id="topbar">
@@ -24,15 +29,12 @@
                 </button>
             </div>
         </div>
-        <div class="article-info">
-            <h1>Zipper</h1>
-            <h2>Bigprint</h2>
-            <p>19,99€</p>
-
-            <div class="article-text">
-                <p>Warmer Zipper mit großem Druck – ideal für chillige Tage.</p>
-            </div>
-        </div>
+        <div id="paypal-container-UK2CXJWMFCBUC" class="paypal"></div>
+        <script>
+            paypal.HostedButtons({
+                hostedButtonId: "UK2CXJWMFCBUC",
+            }).render("#paypal-container-UK2CXJWMFCBUC")
+        </script>
     </div>
 </body>
 </html>
