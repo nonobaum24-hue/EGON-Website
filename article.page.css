@@ -1,19 +1,22 @@
 #content {
-    width: 100vw;
-    height: calc(100vh - 20vh);
-    padding: 20px;
+    width: 100%;
+    min-height: calc(100vh - 20vh);
+    padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 20px;
+    align-items: start;
+    gap: 30px;
     box-sizing: border-box;
 }
 
+/* ── Bild-Seite ── */
 .article-image {
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    position: sticky;
+    top: calc(20vh + 20px);
 }
 
 .article-image img {
@@ -21,15 +24,159 @@
     object-fit: contain;
     width: 100%;
     height: auto;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.6);
 }
 
 .article-image .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    gap: 12px;
+    margin-top: 14px;
 }
 
-.paypal {
+/* ── Info-Seite ── */
+.product-info {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 10px 0;
+}
+
+.product-info h1 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.product-info h2 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin: -10px 0 0;
+    color: rgba(255,255,255,0.7);
+    font-weight: normal;
+}
+
+/* ── Dropdowns ── */
+.select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.select-group label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
+}
+
+.select-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px 40px 12px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    width: 100%;
+    max-width: 360px;
+}
+
+.select-group select:hover,
+.select-group select:focus {
+    border-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.14);
+    outline: none;
+}
+
+.select-group select option {
+    background: #2a2a2a;
+    color: white;
+}
+
+/* ── Preisanzeige ── */
+.price-display {
+    margin-top: 6px;
+}
+
+.price-display .price-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.price-display .price-amount {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+}
+
+/* ── Hinweisbox ── */
+.order-hint {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    max-width: 360px;
+}
+
+.order-hint strong {
+    color: white;
+}
+
+/* ── Color Buttons (Artikel-Seite) ── */
+.color {
+    border-radius: 100px;
+    height: 28px;
+    width: 28px;
+    border: rgba(255,255,255,0.5) solid 2px;
+    cursor: pointer;
+    transition: border 0.15s, scale 0.15s;
+}
+
+.color:hover,
+.color.active {
+    border: white solid 3px;
+    scale: 1.15;
+}
+
+#b  { background-color: rgb(30, 41, 120); }
+#lb { background-color: hsl(184, 45%, 55%); }
+#r  { background-color: hsl(345, 60%, 38%); }
+#y  { background-color: hsl(48, 45%, 60%); }
+
+/* ── Responsive ── */
+@media (max-width: 750px) {
+    #content {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .article-image {
+        position: static;
+    }
+
+    .select-group select {
+        max-width: 100%;
+    }
+
+    .order-hint {
+        max-width: 100%;
+    }
 }

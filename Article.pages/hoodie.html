@@ -1,48 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoodie</title>
+    <title>Hoodie – Rückenprint</title>
     <link rel="stylesheet" href="../mainstyle.css">
-    <link rel="stylesheet" href="../homepage.css">
     <link rel="stylesheet" href="../article.page.css">
-
-    <!-- Paypal -->
-     <script 
-        src="https://www.paypal.com/sdk/js?client-id=BAAWwgVt1-spXpQwWFaVsKt71yb4c3bsWeDb7LdPY10UqCZh0aSnzz6f1XPjCG2iLo3U_KhdJDlGa5vjEk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
-    </script>
 </head>
 <body>
+
+    <!-- Bestellguide Modal -->
+    <div id="order-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-box">
+            <h2>Wie bestelle ich?</h2>
+            <ol>
+                <li>Wähle dein Produkt aus.</li>
+                <li>Wähle Farbe und Größe.</li>
+                <li>Notiere Artikel, Farbe und Größe.</li>
+                <li>Schreibe uns eine Nachricht mit deiner Bestellung.</li>
+                <!-- ✏️ Hier Kontaktinfo eintragen -->
+            </ol>
+            <p>Bei Fragen einfach melden!</p>
+            <button class="modal-close" onclick="document.getElementById('order-modal').classList.remove('open')">Schließen</button>
+        </div>
+    </div>
+
     <div id="topbar">
         <a id="logo" href="../index.html">
             <img src="../img/logo.png" alt="EGON Logo" height="100%" width="auto"/>
         </a>
+        <button id="order-btn" onclick="document.getElementById('order-modal').classList.add('open')">
+            <span class="btn-full">Wie bestelle ich?</span>
+            <span class="btn-short">? Bestellen?</span>
+        </button>
     </div>
 
     <div id="content">
-        <div class="article-image">
-            <img src="../img/products/Hood/HoodBP b.png" id="hoodiebp" alt="Merch Hoodie"/>
-            <div class="button-container">
-                <button id="b" class="color"
-                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="../img/products/Hood/HoodBP b.png"'>
-                </button>
 
-                <button id="lb" class="color"
-                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="../img/products/Hood/HoodBP lb.png"'>
-                </button>
-                
-                <button id="r" class="color"
-                    onclick='event.preventDefault(); document.getElementById("hoodiebp").src="../img/products/Hood/HoodBP r.png"'>
-                </button>
+        <!-- Bild -->
+        <div class="article-image">
+            <img src="../img/products/Hood/HoodBP b.png" id="productImg" alt="Hoodie Rückenprint"/>
+            <div class="button-container">
+                <button id="b" class="color active" onclick="setColor('b')"></button>
+                <button id="lb" class="color" onclick="setColor('lb')"></button>
+                <button id="r" class="color" onclick="setColor('r')"></button>
             </div>
         </div>
-            <div id="paypal-container-97L9UQCJTAY9G" class="paypal"></div>
-            <script>
-                paypal.HostedButtons({
-                    hostedButtonId: "97L9UQCJTAY9G",
-                }).render("#paypal-container-97L9UQCJTAY9G")
-            </script>
+
+        <!-- Info -->
+        <div class="product-info">
+            <div>
+                <h1>Hoodie</h1>
+                <h2>Rückenprint</h2>
+            </div>
+
+            <div class="select-group">
+                <label for="color-select">Farbe</label>
+                <select id="color-select" onchange="onColorSelect()">
+                    <option value="b">Navy</option>
+                    <option value="lb">Aqua Green</option>
+                    <option value="r">Burgundy</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="size-select">Größe</label>
+                <select id="size-select">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>2XL</option>
+                </select>
+            </div>
+
+            <div class="price-display">
+                <span class="price-label">Preis</span>
+                <span class="price-amount">42 €</span>
+            </div>
+
+            <div class="order-hint">
+                Gefällt dir der Hoodie? Klick oben auf
+                <strong>„Wie bestelle ich?"</strong> und erfahre, wie du ihn bestellst.
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        const imgMap = {
+            b:  '../img/products/Hood/HoodBP b.png',
+            lb: '../img/products/Hood/HoodBP lb.png',
+            r:  '../img/products/Hood/HoodBP r.png'
+        };
+
+        function setColor(id) {
+            document.getElementById('productImg').src = imgMap[id];
+            document.getElementById('color-select').value = id;
+            document.querySelectorAll('.color').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function onColorSelect() {
+            const val = document.getElementById('color-select').value;
+            setColor(val);
+        }
+
+        function closeModal(e) {
+            if (e.target === document.getElementById('order-modal')) {
+                document.getElementById('order-modal').classList.remove('open');
+            }
+        }
+    </script>
+
 </body>
 </html>

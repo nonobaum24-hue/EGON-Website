@@ -1,40 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flasche</title>
+    <title>Flasche – Metall</title>
     <link rel="stylesheet" href="../mainstyle.css">
-    <link rel="stylesheet" href="../homepage.css">
     <link rel="stylesheet" href="../article.page.css">
-
-    <!-- Paypal -->
-     <script 
-        src="https://www.paypal.com/sdk/js?client-id=BAAWwgVt1-spXpQwWFaVsKt71yb4c3bsWeDb7LdPY10UqCZh0aSnzz6f1XPjCG2iLo3U_KhdJDlGa5vjEk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
-    </script>
 </head>
 <body>
+
+    <div id="order-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-box">
+            <h2>Wie bestelle ich?</h2>
+            <ol>
+                <li>Wähle dein Produkt aus.</li>
+                <li>Notiere den Artikel.</li>
+                <li>Schreibe uns eine Nachricht mit deiner Bestellung.</li>
+            </ol>
+            <p>Bei Fragen einfach melden!</p>
+            <button class="modal-close" onclick="document.getElementById('order-modal').classList.remove('open')">Schließen</button>
+        </div>
+    </div>
+
     <div id="topbar">
         <a id="logo" href="../index.html">
             <img src="../img/logo.png" alt="EGON Logo" height="100%" width="auto"/>
         </a>
+        <button id="order-btn" onclick="document.getElementById('order-modal').classList.add('open')">
+            <span class="btn-full">Wie bestelle ich?</span>
+            <span class="btn-short">? Bestellen?</span>
+        </button>
     </div>
 
     <div id="content">
+
         <div class="article-image">
-            <img src="../img/products/HoodC/CHoodBP.png" id="hoodieC" alt="Merch Hoodie Child"/>
-            <div class="button-container">
-                <button id="b" class="color"
-                    onclick='event.preventDefault(); document.getElementById("hoodieC").src="../img/products/HoodC/CHoodBP b.png"'>
-                </button>
+            <img src="../img/products/Bottle/Bottle.png" id="productImg" alt="Metallflasche"/>
+        </div>
+
+        <div class="product-info">
+            <div>
+                <h1>Flasche</h1>
+                <h2>Metall</h2>
+            </div>
+
+            <div class="price-display">
+                <span class="price-label">Preis</span>
+                <span class="price-amount">20 €</span>
+            </div>
+
+            <div class="order-hint">
+                Gefällt dir die Flasche? Klick oben auf
+                <strong>„Wie bestelle ich?"</strong> und erfahre, wie du sie bestellst.
             </div>
         </div>
-        <div id="paypal-container-ZN3XSYJ9Z8WV8" class="paypal"></div>
-        <script>
-            paypal.HostedButtons({
-                hostedButtonId: "ZN3XSYJ9Z8WV8",
-            }).render("#paypal-container-ZN3XSYJ9Z8WV8")
-        </script>
+
     </div>
+
+    <script>
+        function closeModal(e) {
+            if (e.target === document.getElementById('order-modal')) {
+                document.getElementById('order-modal').classList.remove('open');
+            }
+        }
+    </script>
+
 </body>
 </html>

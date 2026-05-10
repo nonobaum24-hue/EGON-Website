@@ -42,9 +42,16 @@
     border-radius: 20px;
 }
 
-.merchcard h1, h2{
+.merchcard h1, h2 {
     margin-top: 5px;
     margin-bottom: 3px;
+    color: white;
+}
+
+.merchcard p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .button-container {
@@ -71,18 +78,21 @@
     transition: scale 0.2s ease-in;
 }
 
-#b {
-    background-color: rgb(57, 71, 255);
-}
+/* Farb-IDs */
+#b  { background-color: rgb(57, 71, 255); }
+#lb { background-color: hsl(184, 62%, 62%); }
+#r  { background-color: hsl(0, 100%, 67%); }
+#y  { background-color: hsl(48, 55%, 64%); }
 
-#lb {
-    background-color: hsl(184, 62%, 62%);
-}
-
-#r {
-    background-color: hsl(0, 100%, 67%);
-}
-
-#y {
-    background-color: hsl(48, 55%, 64%);
+/* ── Responsive Homepage ── */
+@media (max-width: 700px) {
+    #merch {
+        grid-template-columns: 1fr;
+    }
+    .merchcard {
+        width: 85vw;
+    }
+    .merchcard img {
+        width: 75vw;
+    }
 }

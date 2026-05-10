@@ -1,40 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zipper Bigprint</title>
+    <title>Zipper – Bigprint</title>
     <link rel="stylesheet" href="../mainstyle.css">
-    <link rel="stylesheet" href="../homepage.css">
     <link rel="stylesheet" href="../article.page.css">
-
-    <!-- Paypal -->
-     <script 
-        src="https://www.paypal.com/sdk/js?client-id=BAAWwgVt1-spXpQwWFaVsKt71yb4c3bsWeDb7LdPY10UqCZh0aSnzz6f1XPjCG2iLo3U_KhdJDlGa5vjEk&components=hosted-buttons&disable-funding=venmo&currency=EUR">
-    </script>
 </head>
 <body>
+
+    <div id="order-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-box">
+            <h2>Wie bestelle ich?</h2>
+            <ol>
+                <li>Wähle dein Produkt aus.</li>
+                <li>Wähle Farbe und Größe.</li>
+                <li>Notiere Artikel, Farbe und Größe.</li>
+                <li>Schreibe uns eine Nachricht mit deiner Bestellung.</li>
+            </ol>
+            <p>Bei Fragen einfach melden!</p>
+            <button class="modal-close" onclick="document.getElementById('order-modal').classList.remove('open')">Schließen</button>
+        </div>
+    </div>
+
     <div id="topbar">
         <a id="logo" href="../index.html">
             <img src="../img/logo.png" alt="EGON Logo" height="100%" width="auto"/>
         </a>
+        <button id="order-btn" onclick="document.getElementById('order-modal').classList.add('open')">
+            <span class="btn-full">Wie bestelle ich?</span>
+            <span class="btn-short">? Bestellen?</span>
+        </button>
     </div>
 
     <div id="content">
+
         <div class="article-image">
-            <img src="../img/products/ZHood BP/ZHood BP.png" id="ZipperBP" alt="Merch Zipper Bigprint"/>
+            <img src="../img/products/ZHood BP/ZHood BP.png" id="productImg" alt="Zipper Bigprint"/>
             <div class="button-container">
-                <button id="b" class="color"
-                    onclick='event.preventDefault(); document.getElementById("ZipperBP").src="../img/products/ZHood BP/ZHood BP b.png"'>
-                </button>
+                <button id="b" class="color active" onclick="setColor('b')"></button>
             </div>
         </div>
-        <div id="paypal-container-UK2CXJWMFCBUC" class="paypal"></div>
-        <script>
-            paypal.HostedButtons({
-                hostedButtonId: "UK2CXJWMFCBUC",
-            }).render("#paypal-container-UK2CXJWMFCBUC")
-        </script>
+
+        <div class="product-info">
+            <div>
+                <h1>Zipper</h1>
+                <h2>Bigprint</h2>
+            </div>
+
+            <div class="select-group">
+                <label for="color-select">Farbe</label>
+                <select id="color-select" onchange="onColorSelect()">
+                    <option value="b">Navy</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="size-select">Größe</label>
+                <select id="size-select">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>2XL</option>
+                </select>
+            </div>
+
+            <div class="price-display">
+                <span class="price-label">Preis</span>
+                <span class="price-amount">45 €</span>
+            </div>
+
+            <div class="order-hint">
+                Gefällt dir der Zipper? Klick oben auf
+                <strong>„Wie bestelle ich?"</strong> und erfahre, wie du ihn bestellst.
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        const imgMap = {
+            b: '../img/products/ZHood BP/ZHood BP b.png'
+        };
+
+        function setColor(id) {
+            document.getElementById('productImg').src = imgMap[id];
+            document.getElementById('color-select').value = id;
+            document.querySelectorAll('.color').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function onColorSelect() {
+            setColor(document.getElementById('color-select').value);
+        }
+
+        function closeModal(e) {
+            if (e.target === document.getElementById('order-modal')) {
+                document.getElementById('order-modal').classList.remove('open');
+            }
+        }
+    </script>
+
 </body>
 </html>
